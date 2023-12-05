@@ -68,10 +68,7 @@ resource "aws_route_table" "pr" {
     gateway_id = aws_nat_gateway.ngw.id
   }
 
-  route {
-    cidr_block = var.private_subnet_cidr
-    gateway_id = aws_nat_gateway.ngw.id
-  }
+
 
   tags = {
     Name =  "${var.tag}-prt"
